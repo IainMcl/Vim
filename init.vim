@@ -7,18 +7,23 @@ set rtp+=~/vimfiles/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-" Plugin 'ycm-core/YouCompleteMe'
+"Plugin 'ycm-core/YouCompleteMe'
 Plugin 'tpope/vim-fugitive'
 Plugin 'morhetz/gruvbox'
-Plugin 'nanotech/jellybeans.vim'
+"Plugin 'nanotech/jellybeans.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'eiiches/vim-rainbowbrackets'
-Plugin 'junegunn/fzf.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdtree'
+"Plugin 'tsony-tsonev/nerdtree-git-pluginvim'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'ryanoasis/vim-devicons'
+Plugin 'scrooloose/nerdcommenter'
 
 call vundle#end()
+filetype plugin indent on
 
 syntax on
 imap ii <esc>
@@ -69,3 +74,6 @@ set smartindent
 
 " Nerd tree
 map <C-o> :NERDTreeToggle<CR>
+" Nerd commenter
+" map [count]<C-w> <plug>NERDCommenterToggle
+
