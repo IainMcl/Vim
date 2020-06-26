@@ -2,8 +2,8 @@ set nocompatible
 filetype off
 
 " Plugins
-set rtp+=C:/Users/iainmc04/.vim/bundle/Vundle.vim
-let path='C:/Users/iainmc04/.vim/bundle'
+set rtp+=~/.vim/bundle/Vundle.vim
+let path='~/.vim/bundle'
 
 call vundle#begin(path)
 
@@ -49,7 +49,7 @@ set showmatch
 set noswapfile
 set nobackup
 " Undo directory
-set undodir='C:Users/iainmc04/.vim/undodir'
+set undodir=~/.vim/undodir
 set undofile
 
 " Key mappings for using vim-fugitive when mearging 
