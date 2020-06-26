@@ -8,7 +8,7 @@ let path='~/.vim/bundle'
 call vundle#begin(path)
 
 Plugin 'gmarik/Vundle.vim'
-"Plugin 'ycm-core/YouCompleteMe'
+" Plugin 'ycm-core/YouComplel"teMe'
 Plugin 'tpope/vim-fugitive'
 Plugin 'morhetz/gruvbox'
 Plugin 'vim-airline/vim-airline'
@@ -20,7 +20,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'ThePrimeagen/vim-be-good'
+Plugin 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
 
 call vundle#end()
 filetype plugin indent on
@@ -44,7 +44,7 @@ set ignorecase
 set smartcase
 set showmatch
 
-" Vim files
+"Vim files
 " Remove tmp save files
 set noswapfile
 set nobackup
