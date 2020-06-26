@@ -3,21 +3,20 @@ filetype off
 
 " Plugins
 set rtp+=C:/Users/iainmc04/.vim/bundle/Vundle.vim
+let path='C:/Users/iainmc04/.vim/bundle'
 
-call vundle#begin()
+call vundle#begin(path)
 
 Plugin 'gmarik/Vundle.vim'
 "Plugin 'ycm-core/YouCompleteMe'
 Plugin 'tpope/vim-fugitive'
 Plugin 'morhetz/gruvbox'
-"Plugin 'nanotech/jellybeans.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'eiiches/vim-rainbowbrackets'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdtree'
-"Plugin 'tsony-tsonev/nerdtree-git-pluginvim'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'scrooloose/nerdcommenter'
@@ -50,7 +49,7 @@ set showmatch
 set noswapfile
 set nobackup
 " Undo directory
-set undodir=C:Users/iainmc04/.vim/undodir
+set undodir='C:Users/iainmc04/.vim/undodir'
 set undofile
 
 " Key mappings for using vim-fugitive when mearging 
