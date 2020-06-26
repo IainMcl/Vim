@@ -49,7 +49,7 @@ set showmatch
 set noswapfile
 set nobackup
 " Undo directory
-set undodir='C:Users/iainmc04/.vim/undodir'
+set undodir=path
 set undofile
 
 " Key mappings for using vim-fugitive when mearging 
