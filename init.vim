@@ -8,7 +8,7 @@ let path='~/.vim/bundle'
 call vundle#begin(path)
 
 Plugin 'gmarik/Vundle.vim'
-" Plugin 'ycm-core/YouComplel"teMe'
+" Plugin 'ycm-core/YouComplelteMe'
 Plugin 'tpope/vim-fugitive'
 Plugin 'morhetz/gruvbox'
 Plugin 'vim-airline/vim-airline'
@@ -21,6 +21,7 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 
 call vundle#end()
 filetype plugin indent on
@@ -80,3 +81,17 @@ set smartindent
 map <C-o> :NERDTreeToggle<CR>
 " Nerd commenter
 " map [count]<C-w> <plug>NERDCommenterToggle
+
+" New line in normal mode
+nnoremap <Leader>o o<Esc>
+nnoremap <Leader>O O<Esc> 
+
+" Coc
+" Using <Tab> and <S-Tab> to navigate autocomplete list.
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" Enter to confirm selection
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" Auto close html tags
+:iabbrev <// </<C-X><C-O>
