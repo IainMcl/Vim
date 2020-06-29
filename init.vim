@@ -94,4 +94,4 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " Auto close html tags
-:iabbrev <// </<C-X><C-O>
+
