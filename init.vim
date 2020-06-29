@@ -2,13 +2,13 @@ set nocompatible
 filetype off
 
 " Plugins
-set rtp+=C:/Users/iainmc04/.vim/bundle/Vundle.vim
-let path='C:/Users/iainmc04/.vim/bundle'
+set rtp+=~/.vim/bundle/Vundle.vim
+let path='~/.vim/bundle'
 
 call vundle#begin(path)
 
 Plugin 'gmarik/Vundle.vim'
-"Plugin 'ycm-core/YouCompleteMe'
+" Plugin 'ycm-core/YouComplelteMe'
 Plugin 'tpope/vim-fugitive'
 Plugin 'morhetz/gruvbox'
 Plugin 'vim-airline/vim-airline'
@@ -20,7 +20,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'ThePrimeagen/vim-be-good'
+" Plugin 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
+" Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 
 call vundle#end()
 filetype plugin indent on
@@ -44,12 +45,13 @@ set ignorecase
 set smartcase
 set showmatch
 
-" Vim files
+"Vim files
 " Remove tmp save files
 set noswapfile
 set nobackup
 " Undo directory
 set undodir=path
+set undodir=~/.vim/undodir
 set undofile
 
 " Key mappings for using vim-fugitive when mearging 
@@ -80,3 +82,17 @@ set smartindent
 map <C-o> :NERDTreeToggle<CR>
 " Nerd commenter
 " map [count]<C-w> <plug>NERDCommenterToggle
+
+" New line in normal mode
+nnoremap <Leader>o o<Esc>
+nnoremap <Leader>O O<Esc> 
+
+" Coc
+" Using <Tab> and <S-Tab> to navigate autocomplete list.
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" Enter to confirm selection
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" Auto close html tags
+
