@@ -104,8 +104,8 @@ augroup qs_colors
 augroup END
 
 " Shift selescted region up and down
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
 
 " Alt j, k to move one line up or down
 nnoremap <A-j> :m +1<CR> 
