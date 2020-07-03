@@ -97,3 +97,8 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " Auto close html tags
 
+" Quickscope 
+augroup qs_colors
+    highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
+    highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
+augroup END
