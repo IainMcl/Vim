@@ -102,3 +102,11 @@ augroup qs_colors
     highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
     highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
 augroup END
+
+" Shift selescted region up and down
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
+" Alt j, k to move one line up or down
+nnoremap <A-j> V :m '>+1<CR><Esc> 
+nnoremap <A-k> V :m '<-2<CR><Esc> 
