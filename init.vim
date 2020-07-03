@@ -2,8 +2,8 @@ set nocompatible
 filetype off
 
 " Plugins
-set rtp+=C:/Users/iainmc04/.vim/bundle/Vundle.vim
 let path='C:/Users/iainmc04/.vim/bundle'
+set rtp+=C:/Users/iainmc04/.vim/bundle/Vundle.vim
 
 call vundle#begin(path)
 
@@ -108,5 +108,5 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
 " Alt j, k to move one line up or down
-nnoremap <A-j> V :m '>+1<CR><Esc> 
-nnoremap <A-k> V :m '<-2<CR><Esc> 
+nnoremap <A-j> :m +1<CR> 
+nnoremap <A-k> :m -2<CR> 
