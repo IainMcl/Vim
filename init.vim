@@ -2,8 +2,8 @@ set nocompatible
 filetype off
 
 " Plugins
-set rtp+=C:/Users/iainmc04/.vim/bundle/Vundle.vim
-let path='C:/Users/iainmc04/.vim/bundle'
+set rtp+=~/.vim/bundle/Vundle.vim
+"let path='C:/Users/iainmc04/.vim/bundle'
 
 call vundle#begin(path)
 
@@ -20,8 +20,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'scrooloose/nerdcommenter'
-" Plugin 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
-" Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+Plugin 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 Plugin 'unblevable/quick-scope' 
 
 call vundle#end()
