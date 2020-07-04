@@ -2,7 +2,12 @@ set nocompatible
 filetype off
 
 " Plugins
+<<<<<<< HEAD
 set rtp+=~/iainmc04/.vim/bundle/Vundle.vim
+=======
+let path='C:/Users/iainmc04/.vim/bundle'
+set rtp+=C:/Users/iainmc04/.vim/bundle/Vundle.vim
+>>>>>>> 03971c03f91676e3b8d4ae13eba9dd32555712a2
 
 call vundle#begin()
 
