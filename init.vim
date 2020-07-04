@@ -97,3 +97,12 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " Auto close html tags
 
+
+" Quick scope
+highlight QuickScopePrimary guifg=none gui=underline ctermfg=14 cterm=none
+highlight QuickScopeSecondary guifg=none gui=underline ctermfg=14 cterm=underline
+
+nmap <leader>qs <plug>(QuickScopeToggle)
+xmap <leader>qs <plug>(QuickScopeToggle)
+
+let g:qs_buftype_blacklist = ['terminal', 'nofile']
