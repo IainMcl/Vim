@@ -2,8 +2,7 @@ set nocompatible
 filetype off
 
 " Plugins
-set rtp+=~/.vim/bundle/Vundle.vim
-"Let path='~/.vim/bundle'
+set rtp+=~/iainmc04/.vim/bundle/Vundle.vim
 
 call vundle#begin()
 
@@ -20,8 +19,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'scrooloose/nerdcommenter'
-" Plugin 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
-" Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+Plugin 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 Plugin 'unblevable/quick-scope' 
 
 call vundle#end()
@@ -97,12 +96,17 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " Auto close html tags
 
-
-" Quick scope
-highlight QuickScopePrimary guifg=none gui=underline ctermfg=14 cterm=none
-highlight QuickScopeSecondary guifg=none gui=underline ctermfg=14 cterm=underline
-
-nmap <leader>qs <plug>(QuickScopeToggle)
-xmap <leader>qs <plug>(QuickScopeToggle)
-
+" Quickscope 
+augroup qs_colors
+    highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
+    highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
+augroup END
 let g:qs_buftype_blacklist = ['terminal', 'nofile']
+
+" Shift selescted region up and down
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
+
+" Alt j, k to move one line up or down
+nnoremap <A-j> :m +1<CR> 
+nnoremap <A-k> :m -2<CR> 
