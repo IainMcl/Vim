@@ -29,6 +29,7 @@ filetype plugin indent on
 
 syntax on
 imap ii <esc>
+nnoremap <leader>w :w<CR>
 set relativenumber
 set nu
 set encoding=utf-8
@@ -52,7 +53,7 @@ set noswapfile
 set nobackup
 " Undo directory
 set undodir=path
-" set undodir=~/.vim/undodir
+set undodir=~/.vim/undodir
 set undofile
 
 " Key mappings for using vim-fugitive when mearging 
@@ -99,8 +100,8 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " Quickscope 
 augroup qs_colors
-    highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
-    highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
+    highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 
+    highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 
 augroup END
 
 " Shift selescted region up and down
