@@ -99,8 +99,8 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " Quickscope 
 augroup qs_colors
-    highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
-    highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
+    highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 
+    highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 
 augroup END
 let g:qs_buftype_blacklist = ['terminal', 'nofile']
 
