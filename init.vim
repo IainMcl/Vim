@@ -2,12 +2,7 @@ set nocompatible
 filetype off
 
 " Plugins
-<<<<<<< HEAD
-set rtp+=~/iainmc04/.vim/bundle/Vundle.vim
-=======
-let path='C:/Users/iainmc04/.vim/bundle'
-set rtp+=C:/Users/iainmc04/.vim/bundle/Vundle.vim
->>>>>>> 03971c03f91676e3b8d4ae13eba9dd32555712a2
+set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
 
@@ -37,6 +32,7 @@ set relativenumber
 set nu
 set encoding=utf-8
 let mapleader=" "
+nnoremap <leader>w :w<CR>
 " Set cursor in normal mode to small underline
 set guicursor+=n:hor20-Cursor/lCursor
 
