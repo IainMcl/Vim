@@ -21,7 +21,7 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'scrooloose/nerdcommenter'
 " Plugin 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
-" Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 Plugin 'unblevable/quick-scope' 
 
 call vundle#end()
@@ -55,6 +55,12 @@ set nobackup
 set undodir=path
 set undodir=~/.vim/undodir
 set undofile
+
+" Buff resizing
+nnoremap <Leader>= :vertical resize +5<CR>
+nnoremap <Leader>+ :resize +5<CR>
+nnoremap <Leader>- :vertical resize -5<CR>
+nnoremap <Leader>_ :resize -5<CR>
 
 " Key mappings for using vim-fugitive when mearging 
 " gdif
