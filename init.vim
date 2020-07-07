@@ -3,12 +3,11 @@ filetype off
 
 " Plugins
 set rtp+=~/.vim/bundle/Vundle.vim
-let path='~/.vim/bundle'
 
-call vundle#begin(path)
+call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-"Plugin 'ycm-core/YouCompleteMe'
+" Plugin 'ycm-core/YouComplelteMe'
 Plugin 'tpope/vim-fugitive'
 Plugin 'morhetz/gruvbox'
 Plugin 'vim-airline/vim-airline'
@@ -20,7 +19,9 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'ThePrimeagen/vim-be-good'
+Plugin 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+Plugin 'unblevable/quick-scope' 
 
 call vundle#end()
 filetype plugin indent on
@@ -31,6 +32,7 @@ set relativenumber
 set nu
 set encoding=utf-8
 let mapleader=" "
+nnoremap <leader>w :w<CR>
 " Set cursor in normal mode to small underline
 set guicursor+=n:hor20-Cursor/lCursor
 
@@ -44,11 +46,12 @@ set ignorecase
 set smartcase
 set showmatch
 
-" Vim files
+"Vim files
 " Remove tmp save files
 set noswapfile
 set nobackup
 " Undo directory
+set undodir=path
 set undodir=~/.vim/undodir
 set undofile
 
@@ -80,3 +83,31 @@ set smartindent
 map <C-o> :NERDTreeToggle<CR>
 " Nerd commenter
 " map [count]<C-w> <plug>NERDCommenterToggle
+
+" New line in normal mode
+nnoremap <Leader>o o<Esc>
+nnoremap <Leader>O O<Esc> 
+
+" Coc
+" Using <Tab> and <S-Tab> to navigate autocomplete list.
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" Enter to confirm selection
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" Auto close html tags
+
+" Quickscope 
+augroup qs_colors
+    highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 
+    highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 
+augroup END
+let g:qs_buftype_blacklist = ['terminal', 'nofile']
+
+" Shift selescted region up and down
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
+
+" Alt j, k to move one line up or down
+nnoremap <A-j> :m +1<CR> 
+nnoremap <A-k> :m -2<CR> 
