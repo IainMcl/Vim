@@ -40,6 +40,11 @@ set guicursor+=n:hor20-Cursor/lCursor
 set noerrorbells
 set vb t_vb=
 
+" Tnmapab navigation
+" Goes with airline tabs
+nnoremap <Tab> :bn<CR>
+nnoremap <S-Tab> :bp<CR>
+
 " Searching
 set hlsearch
 set incsearch
