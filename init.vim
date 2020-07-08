@@ -2,10 +2,9 @@ set nocompatible
 filetype off
 
 " Plugins
-let path='C:/Users/iainmc04/.vim/bundle'
-set rtp+=C:/Users/iainmc04/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim
 
-call vundle#begin(path)
+call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 " Plugin 'ycm-core/YouComplelteMe'
@@ -20,7 +19,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'scrooloose/nerdcommenter'
-" Plugin 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
+Plugin 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 Plugin 'unblevable/quick-scope' 
 
@@ -34,6 +33,7 @@ set relativenumber
 set nu
 set encoding=utf-8
 let mapleader=" "
+nnoremap <leader>w :w<CR>
 " Set cursor in normal mode to small underline
 set guicursor+=n:hor20-Cursor/lCursor
 
@@ -107,6 +107,7 @@ augroup qs_colors
     highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 
     highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 
 augroup END
+let g:qs_buftype_blacklist = ['terminal', 'nofile']
 
 " Shift selescted region up and down
 vnoremap <A-j> :m '>+1<CR>gv=gv
