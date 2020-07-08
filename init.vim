@@ -102,8 +102,6 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " Enter to confirm selection
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
-" Auto close html tags
-
 " Quickscope 
 augroup qs_colors
     highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 
@@ -117,3 +115,8 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 " Alt j, k to move one line up or down
 nnoremap <A-j> :m +1<CR> 
 nnoremap <A-k> :m -2<CR> 
+
+" Airline
+set showtabline=2
+" Enable fonts
+let g:airline_powerline_fonts=1
