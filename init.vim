@@ -8,7 +8,8 @@ set rtp+=C:/Users/iainmc04/.vim/bundle/Vundle.vim
 call vundle#begin(path)
 
 Plugin 'gmarik/Vundle.vim'
-" Plugin 'ycm-core/YouComplelteMe'
+"Plugin 'ycm-core/YouComplelteMe'
+Plugin 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 Plugin 'tpope/vim-fugitive'
 Plugin 'morhetz/gruvbox'
 Plugin 'vim-airline/vim-airline'
@@ -21,7 +22,7 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'scrooloose/nerdcommenter'
 " Plugin 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
-Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+"Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 Plugin 'unblevable/quick-scope' 
 
 call vundle#end()
@@ -57,7 +58,7 @@ set showmatch
 set noswapfile
 set nobackup
 " Undo directory
-set undodir=path
+"set undodir=path
 set undodir=~/.vim/undodir
 set undofile
 
@@ -125,3 +126,7 @@ nnoremap <A-k> :m -2<CR>
 set showtabline=2
 " Enable fonts
 let g:airline_powerline_fonts=1
+
+" Use doplete (auto complete)
+let g:deoplete#enable_at_startup = 1 
+let g:python3_host_prog = 'C:\Anaconda3\python.exe'
