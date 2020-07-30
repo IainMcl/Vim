@@ -2,12 +2,7 @@ set nocompatible
 filetype off
 
 " Plugins
-<<<<<<< HEAD
-set rtp+=~/iainmc04/.vim/bundle/Vundle.vim
-=======
-let path='C:/Users/iainmc04/.vim/bundle'
-set rtp+=C:/Users/iainmc04/.vim/bundle/Vundle.vim
->>>>>>> 03971c03f91676e3b8d4ae13eba9dd32555712a2
+set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
 
@@ -27,21 +22,32 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 Plugin 'unblevable/quick-scope' 
+Plugin 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plugin 'mattn/emmet-vim'
 
 call vundle#end()
+
 filetype plugin indent on
 
 syntax on
 imap ii <esc>
 set relativenumber
 set nu
-set encoding=utf-8
+set encoding=UTF-8
 let mapleader=" "
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
+nnoremap <leader>x :x<CR>
 " Set cursor in normal mode to small underline
 set guicursor+=n:hor20-Cursor/lCursor
 
 set noerrorbells
 set vb t_vb=
+
+" Tnmapb navigation
+" Goes with airline tabs
+nnoremap <Tab> :bn<CR>
+nnoremap <S-Tab> :bp<CR>
 
 " Searching
 set hlsearch
@@ -58,6 +64,12 @@ set nobackup
 set undodir=path
 set undodir=~/.vim/undodir
 set undofile
+
+" Buff resizing
+nnoremap <Leader>= :vertical resize +5<CR>
+nnoremap <Leader>+ :resize +5<CR>
+nnoremap <Leader>- :vertical resize -5<CR>
+nnoremap <Leader>_ :resize -5<CR>
 
 " Key mappings for using vim-fugitive when mearging 
 " gdif
@@ -103,8 +115,8 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " Quickscope 
 augroup qs_colors
-    highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
-    highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
+    highlight QuickScopePrimary guifg='#afff5f' ctermfg=155 
+    highlight QuickScopeSecondary guifg='#5fffff' ctermfg=81 
 augroup END
 let g:qs_buftype_blacklist = ['terminal', 'nofile']
 
@@ -115,3 +127,15 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 " Alt j, k to move one line up or down
 nnoremap <A-j> :m +1<CR> 
 nnoremap <A-k> :m -2<CR> 
+
+" Airline
+set showtabline=2
+" Enable fonts
+let g:airline_powerline_fonts=1
+
+" Terminal mode
+tnoremap <Esc> <C-\><C-n>
+tnoremap ii <C-\><C-n> 
+
+" Emmet
+let g:user_emmet_leader_key=','
